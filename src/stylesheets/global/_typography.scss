@@ -74,6 +74,7 @@ h1 {
   @extend .headline;
   @extend .xl;
   @extend .centered;
+  margin-top: 0;
   @include text-shadow(rgba($secondary-color, .3) 0 1px 1px);
   small {
     @extend .subheadline-font;

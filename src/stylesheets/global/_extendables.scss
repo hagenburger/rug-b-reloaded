@@ -1,5 +1,6 @@
 .area {
   background: $secondary-color;
+  background: rgba(white, .8);
   @include box-shadow($secondary-color 0 0 2px);
   @include border-radius(2px);
 }

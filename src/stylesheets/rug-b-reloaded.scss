@@ -11,6 +11,7 @@
 
 $primary-color: #C42828;
 $secondary-color: #D65A5C;
+$border-color: lighten(#D65A5C, 25%);
 $font-color: #5C130C;
 $link-color: #6B130F;
 $link-hover-color: darken($link-color, 15%);

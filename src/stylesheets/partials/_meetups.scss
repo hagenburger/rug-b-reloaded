@@ -8,7 +8,7 @@
   }
   .location {
     @extend .centered;
-    border-right: 1px $primary-color solid;
+    border-right: 1px $border-color solid;
     display: table-cell;
     height: 200px;
     padding: 20px;
@@ -16,17 +16,19 @@
     vertical-align: middle;
   }
   .sponsor {
-    @extend .white-area;
+    background: white;
     display: block;
-    margin: 10px;
+    margin: 10px 0;
     padding: 10px;
+    @include border-radius(4px);
+    @include box-shadow(rgba(darken($primary-color, 15%), .3) 0 1px 5px inset);
     img {
       max-height: 80px;
       vertical-align: bottom;
     }
   }
   .map {
-    border-left: 1px $primary-color solid;
+    border-left: 1px $border-color solid;
     float: right;
     height: 200px;
     margin-left: -1px;
@@ -48,7 +50,7 @@
       @include box-shadow(rgba($primary-color, .5) 0 1px 3px);
     }
     > li {
-      border-top: 3px $primary-color double;
+      border-top: 3px $border-color double;
       list-style-type: none;
       margin: 0;
       padding: 20px;

@@ -1,20 +1,18 @@
 .feed {
   small {
-    color: $secondary-color;
-    font-weight: bold;
     margin-top: -5px;
   }
 }
 
 #github {
-  border-right: 3px lighten($primary-color, 5%) double;
+  border-right: 3px lighten($primary-color, 20%) double;
   float: left;
   padding: 0 40px 20px 20px;
   width: 258px;
 }
 
 #blog {
-  border-left: 3px lighten($primary-color, 5%) double;
+  border-left: 3px lighten($primary-color, 20%) double;
   float: left;
   margin-left: -3px;
   padding: 0 20px 20px 40px;

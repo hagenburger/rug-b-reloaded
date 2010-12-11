@@ -5,18 +5,28 @@ html {
 
 body {
   @extend .clearfix;
-  background: image-url("tv-tower.jpg") no-repeat;
+  background: image-url("tv-tower.jpg") no-repeat fixed;
   min-height: 100%;
   padding-bottom: 40px;
 }
 
 #page {
+  @extend .clearfix;
   margin: 0 auto;
-  width: 640px;
+  width: 800px;
+}
+
+#content {
+  @extend .clearfix;
+  background: rgba(white, .5);
+  padding: 20px 80px 40px;
+  @include border-radius(4px);
 }
 
 header {
   @extend .clearfix;
+  margin-bottom: 20px;
+  padding: 0 80px;
   a {
     float: left;
     margin: 5px;
