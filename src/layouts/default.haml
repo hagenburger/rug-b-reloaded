@@ -23,14 +23,24 @@
     %link(rel="apple-touch-icon" href="#{current_page_relative_path}apple-touch-icon.png")
     %link(rel="stylesheet" href="#{current_page_relative_path}stylesheets/rug-b-reloaded.css?v=1")
     %script(src="#{current_page_relative_path}javascripts/vendor/modernizr-1.5.min.js")
+    %script(src="http://use.typekit.com/kck7fsq.js")
+    %script try{Typekit.load()}catch(e){}
   %body
-    %header
-
-    #main
-      = yield
-    %footer
+    #page
+      %header
+        %nav
+          %a.selected(href="/") Home
+          %a(href="archive.html") Archive
+          %a(href="inprint.html") Imprint
+          %a(href="http://twitter.com/rug_b") Twitter
+          %a(href="http://github.com/rug-b") GitHub
+          %a(href="http://groups.google.com/group/rug-b") Mailing List
+          %a(href="http://www.xing.com/net/rug-b") Xing Group
+      #main
+        = yield
+      %footer
 
     %script(src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js")
     %script
       !window.jQuery && document.write(unescape('%3Cscript src="#{current_page_relative_path}/javascripts/vendor/jquery-1.4.2.min.js"%3E%3C/script%3E'))
-    = javascripts :rug-b-reloaded
+    = javascripts 'rug-b-reloaded'

@@ -1,1 +1,32 @@
+html {
+  background: $primary-color image-url("background.png") repeat-y;
+  height: 100%;
+}
 
+body {
+  @extend .clearfix;
+  background: image-url("tv-tower.jpg") no-repeat;
+  min-height: 100%;
+  padding-bottom: 40px;
+}
+
+#page {
+  margin: 0 auto;
+  width: 640px;
+}
+
+header {
+  @extend .clearfix;
+  a {
+    float: left;
+    margin: 5px;
+    padding: 3px 10px;
+    @include text-shadow(rgba(white, .3) 0 1px 1px);
+    &.selected {
+      @extend .area;
+    }
+    &[href^="http"] {
+      float: right;
+    }
+  }
+}

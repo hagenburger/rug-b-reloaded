@@ -1,1 +1,56 @@
-%h1 StaticMatic!
+%h1
+  %small Welcome to the
+  Ruby User Group Berlin
+%section.meetup
+  :ruby
+    street = "Adalbertstraße 7 – 8"
+    zip = "10999"
+    city = "Berlin"
+    icon = "http://www.hagenburger.net/TMP/ruby.png"
+    map_options = {
+      center: "#{street},#{zip}%20#{city}",
+      zoom: 14,
+      size: "280x200",
+      maptype: "roadmap",
+      markers: "icon:#{icon}|#{street},#{zip}%20#{city}",
+      sensor: false
+    }
+  %h2
+    %small Our next meetup
+    %time(datetime="2010-11-04T19:30+01:00") Thursday, November 4th, 2010, 19:30
+  .map
+    %img(src="http://maps.google.com/maps/api/staticmap?#{map_options.map{|k,v| "#{k}=#{v}"}.join("&")}")
+  .location
+    %h3 Our next location is sponsored by:
+    %a.sponsor(href="http://co-up.de")
+      %img(src="http://co-up.de/images/coup_logo.png")
+    %address
+      #{street}
+      %br
+      #{zip} #{city}
+  %ul.talks
+    %li
+      %blockquote Riak Search
+      .speaker
+        %img(src="http://a2.twimg.com/profile_images/409867738/seancribbs-square_bigger.jpg")
+        %a.name(href="http://seancribbs.com/") Sean Cribbs
+        %a.twitter(href="http://twitter.com/seancribbs") Twitter
+        %a.github(href="https://github.com/seancribbs") GitHub
+    %li
+      %blockquote Writing a library from scratch
+      .speaker
+        %img(src="http://a3.twimg.com/profile_images/326153315/twitterProfilePhoto_bigger.jpg")
+        %a.name(href="http://kronn.de/weblog/") Matthias Vieweger
+        %a.twitter(href="http://twitter.com/der_kronn") Twitter
+        %a.github(href="https://github.com/kronn") GitHub
+%section#github.feed
+  %h2
+    GitHub Feed
+    %small by our members
+  %p Insert list of recent GitHub activity here. All activity by users followed by rug-b should be listed here.
+%section#blog.feed
+  %h2
+    Blog Feed
+    %small by our members
+  %p Insert list of recent blog here. It should be an ordered list of blog posts made by members of the RUG-B.
+    

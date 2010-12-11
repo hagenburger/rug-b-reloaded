@@ -5,21 +5,25 @@
 
 // External plugins e. g. jQuery plugins
 
-@import "vendor/plugin-name";
+//@import "vendor/plugin-name";
 
 // Base colors and sizes
 
-$primary-color: #aaa;
-$secondary-color: #bbb;
-$font-color: #444;
-$link-color: #3F7D99;
+$primary-color: #C42828;
+$secondary-color: #D65A5C;
+$font-color: #5C130C;
+$link-color: #6B130F;
+$link-hover-color: darken($link-color, 15%);
 
 $base-font-family: "helvetica neue", helvetica, arial, sans-serif;
-$headline-font-family: "helvetica neue", helvetica, arial, sans-serif;
+$headline-font-family: "r6d8-1", "r6d8-2", helvetica, arial, sans-serif;
+$headline-font-family: "league-gothic-1", "league-gothic-2", helvetica, arial, sans-serif;
+$subheadline-font-family: "olidia-1", "olidia-2", helvetica, arial, sans-serif;
+$subheadline-font-family: "jbt-annabelle-1", "jbt-annabelle-2", helvetica, arial, sans-serif;
 $small-font-size: 11px;
 $base-font-size: 13px;
-$large-font-size: 20px;
-$x-large-font-size: 30px;
+$large-font-size: 30px;
+$x-large-font-size: 44px;
 $base-line-height: 1.231;
 
 // HTML5 boilerplate
@@ -40,4 +44,5 @@ $base-line-height: 1.231;
 
 // Content partials (article, lists, ...)
 
-@import "partials/xyz";
+@import "partials/meetups";
+@import "partials/feeds";

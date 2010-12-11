@@ -1,0 +1,96 @@
+.meetup {
+  @extend .area;
+  @extend .clearfix;
+  margin: -20px -40px 40px;
+  padding: 20px 40px;
+  h2 {
+    margin-top: 20px;
+  }
+  .location {
+    @extend .centered;
+    border-right: 1px $primary-color solid;
+    display: table-cell;
+    height: 200px;
+    padding: 20px;
+    width: 279px;
+    vertical-align: middle;
+  }
+  .sponsor {
+    @extend .white-area;
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    img {
+      max-height: 80px;
+      vertical-align: bottom;
+    }
+  }
+  .map {
+    border-left: 1px $primary-color solid;
+    float: right;
+    height: 200px;
+    margin-left: -1px;
+    padding: 20px;
+    img {
+      vertical-align: bottom;
+      @include border-radius(2px);
+      @include box-shadow(rgba($primary-color, .5) 0 1px 3px);
+    }
+  }
+  .talks {
+    clear: both;
+    margin: 0;
+    img {
+      float: left;
+      height: 48px;
+      margin-right: 20px;
+      @include border-radius(2px);
+      @include box-shadow(rgba($primary-color, .5) 0 1px 3px);
+    }
+    > li {
+      border-top: 3px $primary-color double;
+      list-style-type: none;
+      margin: 0;
+      padding: 20px;
+    }
+    .name {
+      @extend .headline-font;
+      display: block;
+      font-size: 150%;
+      padding-top: 3px;
+    }
+    .twitter + .github {
+      &:before {
+        content: " ·  ";
+      }
+    }
+    .speaker {
+      @extend .clearfix;
+    }
+    blockquote {
+      @extend .headline-font;
+      @extend .l;
+      clear: both;
+      float: right;
+      max-width: 400px;
+      padding: 9px 0;
+      text-align: right;
+      &:before {
+        content: "“";
+      }
+      &:after {
+        content: "”";
+      }
+    }
+  }
+  .links {
+    @extend .clearfix;
+    > li {
+      @extend .white-area;
+      float: right;
+      list-style-type: none;
+      margin-left: 10px;
+      padding: 3px 10px;
+    }
+  }
+}

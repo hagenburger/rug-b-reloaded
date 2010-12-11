@@ -1,6 +1,6 @@
 ssh_user = "nico@hagenburger.net"
-production_url = "http://www.rug-b-reloaded.net/"
-production_path = "/home/web/rug-b-reloaded"
+production_url = "http://www.rug-b.net/"
+production_path = "/home/web/hagenburger/PREVIEW/rug-b-reloaded"
 
 desc "Builds the site with bundler"
 task :build do
