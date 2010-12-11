@@ -1,0 +1,11 @@
+/* line 1, ../../src/stylesheets/handheld.scss */
+* {
+  float: none;
+  background: #fff;
+  color: #000;
+}
+
+/* line 8, ../../src/stylesheets/handheld.scss */
+body {
+  font-size: 80%;
+}

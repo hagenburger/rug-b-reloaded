@@ -1,0 +1,36 @@
+- @lang        ||= 'en'
+- @author      ||= ''
+- @description ||= ''
+- @title         = [@title, 'rug-b-reloaded'].compact.join(' - ')
+!!!  
+<!--[if lt IE 7 ]><html lang="#{@lang}" class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html lang="#{@lang}" class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="#{@lang}" class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="#{@lang}" class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+%html(lang="#{@lang}" class="no-js")
+  <!--<![endif]-->
+  %head
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+    - if description = @description
+      %meta(name="description" content="#{description}")
+    - if author = @author
+      %meta(name="author" content="#{author}")
+    %title= @title
+    %meta(name="viewport" content="width=device-width; initial-scale=1.0")
+    %link(rel="shortcut icon" href="#{current_page_relative_path}favicon.ico")
+    %link(rel="apple-touch-icon" href="#{current_page_relative_path}apple-touch-icon.png")
+    %link(rel="stylesheet" href="#{current_page_relative_path}stylesheets/rug-b-reloaded.css?v=1")
+    %script(src="#{current_page_relative_path}javascripts/vendor/modernizr-1.5.min.js")
+  %body
+    %header
+
+    #main
+      = yield
+    %footer
+
+    %script(src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js")
+    %script
+      !window.jQuery && document.write(unescape('%3Cscript src="#{current_page_relative_path}/javascripts/vendor/jquery-1.4.2.min.js"%3E%3C/script%3E'))
+    = javascripts :rug-b-reloaded

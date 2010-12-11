@@ -1,0 +1,7 @@
+source 'http://rubygems.org'
+gem 'haml', '3.1.0.alpha.144'
+gem 'compass', '0.11.alpha.4'
+gem 'html5-boilerplate', '~> 0.2.6'
+gem 'staticmatic', '0.11.0.alpha.10'
+gem 'jammit', '~> 0.5.4'
+gem 'maruku', '~> 0.6.0'
